@@ -9,7 +9,7 @@ function tos()
   }
 }
 
-fuction nextbd()
+function nextbd()
 {
   if(document.getElementById("img1").src.match("./images/witc1.PNG")){
     document.getElementById("img1").src="./images/witc2.PNG";

@@ -1,6 +1,5 @@
 function tos()
 {
-  alert($("#order").val());
   if($("#order").val()=="wzfls itclub"){
     window.location="../itclub.html";
   }

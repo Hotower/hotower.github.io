@@ -1,10 +1,16 @@
 function tos()
 {
-  if($("#order").val()=="wzfls itclub"){
-    window.location="../itclub.html";
-  }
-  else{
-    alert($("#order").val());
+  var x=$("#order").val();
+  switch(x)
+  {
+    case "wzfls itclub":
+      window.location="../itclub.html";
+      break;
+    case "md5":
+      window.location="../md5former.html";
+      break;
+    default:
+      alert(x);
   }
 }
 

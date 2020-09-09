@@ -17,12 +17,12 @@ function tos()
 function nextbd()
 {
   if(document.getElementById("img1").src="./images/logo.gif"){
-    document.getElementById("img1").src="./images/witc1.PNG";
+    document.getElementById("img1").src="./images/witc1.png";
   }
-  if(document.getElementById("img1").src.match("./images/witc1.PNG")){
-    document.getElementById("img1").src="./images/witc2.PNG";
+  else if(document.getElementById("img1").src.match("./images/witc1.png")){
+    document.getElementById("img1").src="./images/witc2.png";
   }
-  else if(document.getElementById("img1").match("./images/witc2.PNG")){
+  else if(document.getElementById("img1").match("./images/witc2.png")){
     document.getElementById("img1").src="./images/witc3.PNG";
   }
 }

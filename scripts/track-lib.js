@@ -22,7 +22,7 @@ function nextbd()
   else if(document.getElementById("img1").src.match("./images/witc1.png")){
     document.getElementById("img1").src="./images/witc2.png";
   }
-  else if(document.getElementById("img1").match("./images/witc2.png")){
+  else if(document.getElementById("img1").src.match("./images/witc2.png")){
     document.getElementById("img1").src="./images/witc3.PNG";
   }
 }

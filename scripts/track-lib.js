@@ -16,7 +16,7 @@ function tos()
 
 function nextbd()
 {
-  if(document.getElementById("img1").src="./images/logo.gif"){
+  if(document.getElementById("img1").src.match("./images/logo.gif")){
     document.getElementById("img1").src="./images/witc1.png";
   }
   else if(document.getElementById("img1").src.match("./images/witc1.png")){

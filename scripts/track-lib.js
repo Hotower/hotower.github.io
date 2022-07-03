@@ -14,6 +14,7 @@ function tos()
   }
 }
 
+//for it club intro
 function nextbd()
 {
   if(document.getElementById("img1").src.match("./images/logo.gif")){

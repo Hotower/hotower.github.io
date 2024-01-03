@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>score</title>
+<script>
+function findJqWeb(yrsId, xqsId) {
+ckYrs = document.getElementById(yrsId).value;
+
+ckXqs = document.getElementById(xqsId).value;
+ckXqs = 9 * ckXqs - 6;
+
+window.open('http://jwmk.zcmu.edu.cn/jwglxt/cjjfgl/xkjsjfsqsh_cxKcxxView.html?doType=query&xnm='+ckYrs+'&xqm='+ckXqs+'&queryModel.showCount=999&queryModel.pageSize=999');
+}
+
+function showScore(scJn, lbId) {
+scOri = document.getElementById(scJn).value;
+scJsn = eval('('+scOri+')');
+
+scItm = scJsn.items;
+istLb = document.getElementById(lbId);
+nTable = document.createElement('table');
+nBody = document.createElement('tbody');
+for(let i = 0; i < scItm.length; ++i) {
+nRow = document.createElement('tr');
+tc1 = document.createElement('td');
+tc1.innerHTML = scItm[i].kcmc
+tc2 = document.createElement('td');
+tc2.innerHTML = scItm[i].cj
+nRow.appendChild(tc1);nRow.appendChild(tc2);
+nBody.appendChild(nRow);
+console.log(scItm[i].kcmc + '   ' + scItm[i].cj);
+}
+nTable.appendChild(nBody);
+istLb.appendChild(nTable);
+}
+</script>
+</head>
+
+<body>
+
+<div id = 'rdctSrc'>
+<button type = 'submit' onClick = 'window.open("http://jwmk.zcmu.edu.cn/jwglxt")'>登录</button>
+<input id = 'yrsIn'/><f>学年 第</f><input id = 'xqsIn'/><f>学期</f>
+<button type = 'submit' onClick = 'findJqWeb("yrsIn","xqsIn")'>check</button>
+</div>
+
+<hr />
+
+<div id = 'inputArea'>
+<input id = 'scoreJson' /><button onClick = 'showScore("scoreJson","scBoard")'>show</button>
+</div>
+
+<div id = 'showArea'>
+<div id = 'scBoard'></div>
+</div>
+</body>
+
+</html>
